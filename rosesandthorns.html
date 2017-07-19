@@ -6,8 +6,8 @@
     <h1 style="color:#71A6EE;">ROSES AND THORNS</h1>
     <hr>
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'Roses')">Roses</button>
-        <button class="tablinks" onclick="openCity(event, 'Thorns')">Thorns</button>
+        <button class="tablinks" onclick="openTab(event, 'Roses')">Roses</button>
+        <button class="tablinks" onclick="openTab(event, 'Thorns')">Thorns</button>
     </div>
     
     <div id="Roses" class="tabcontent">
@@ -23,4 +23,18 @@
         <h2>aso;dfij</h2>
     </div>
     
+function openTab (evt, tabName) {
+    //declare all variables
+    var i, tabcontent, tablinks;
+    
+    // Get all elements with class= "tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+                                      
+    //show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += "active";
+}
 </body>
