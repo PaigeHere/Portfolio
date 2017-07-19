@@ -29,20 +29,19 @@
         <h2>aso;dfij</h2>
         <p> I just want this to work :( </p>
     </div>
-    <script>    
-function openCity(evt, tabName) {
-    //declare all variables
+<script>
+function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
-    
-    // Get all elements with class= "tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tabcontent[i].style.display = "none";
     }
-                                      
-    //show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += "active";
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
 }
 </script>
 
